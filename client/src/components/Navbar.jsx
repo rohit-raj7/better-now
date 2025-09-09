@@ -4,20 +4,20 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [bgColor, setBgColor] = useState("#047A3A");
-  const [textColor, setTextColor] = useState("#FFFFFF");  
+  const [textColor, setTextColor] = useState("#FFFFFF");
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setBgColor("#E5E7EB");    
-        setTextColor("#02332d");   
+        setBgColor("#E5E7EB");
+        setTextColor("#02332d");
       } else {
         if (location.pathname === "/") {
           setBgColor("#034634");
           setTextColor("#FFFFFF");
         } else if (location.pathname === "/about") {
-          setBgColor("#E5E7EB");   
+          setBgColor("#E5E7EB");
           setTextColor("#02332d");
         } else if (location.pathname === "/mortgage-calculator") {
           setBgColor("#0d6541");
@@ -30,10 +30,15 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initialize
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location]);
+
+  const getLinkClass = (path) =>
+    `hover:underline ${
+      location.pathname === path ? "border-b-2 border-green-500 font-bold" : ""
+    }`;
 
   return (
     <nav
@@ -41,7 +46,7 @@ const Navbar = () => {
       style={{
         backgroundColor: bgColor,
         color: textColor,
-        borderBottomColor: "#045C2C",   
+        borderBottomColor: "#045C2C",
         borderBottomWidth: "1px",
       }}
     >
@@ -54,11 +59,35 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden sm:flex space-x-8 text-lg font-medium">
-        <li><Link to="/" className="hover:underline" style={{ color: textColor }}>Buy</Link></li>
-        <li><Link to="/about" className="hover:underline" style={{ color: textColor }}>About</Link></li>
-        <li><Link to="/mortgage-calculator" className="hover:underline" style={{ color: textColor }}>Mortgage Calculator</Link></li>
-        <li><Link to="/start-now" className="hover:underline" style={{ color: textColor }}>Start Now</Link></li>
-        <li><Link to="/" className="hover:underline" style={{ color: textColor }}>Better+</Link></li>
+        
+        <li>
+          <Link
+            to="/about"
+            className={getLinkClass("/about")}
+            style={{ color: textColor }}
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/mortgage-calculator"
+            className={getLinkClass("/mortgage-calculator")}
+            style={{ color: textColor }}
+          >
+            Mortgage Calculator
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/start-now"
+            className={getLinkClass("/start-now")}
+            style={{ color: textColor }}
+          >
+            Start Now
+          </Link>
+        </li>
+         
       </ul>
 
       {/* Desktop Right Menu */}
@@ -90,7 +119,13 @@ const Navbar = () => {
               2z" />
           </svg>
         </button>
-        <a href="#" className="hover:underline text-xl" style={{ color: textColor }}>Sign in</a>
+        <a
+          href="#"
+          className="hover:underline text-xl"
+          style={{ color: textColor }}
+        >
+          Sign in
+        </a>
       </div>
 
       {/* Mobile Hamburger */}
@@ -99,8 +134,22 @@ const Navbar = () => {
         style={{ borderColor: textColor, color: textColor }}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d={
+              isOpen
+                ? "M6 18L18 6M6 6l12 12"
+                : "M4 6h16M4 12h16M4 18h16"
+            }
+          />
         </svg>
       </button>
 
@@ -110,11 +159,29 @@ const Navbar = () => {
           className="absolute top-full left-0 w-full sm:hidden flex flex-col items-center space-y-4 py-4 z-50"
           style={{ backgroundColor: bgColor, color: textColor }}
         >
-          <a href="#" className="hover:underline" style={{ color: textColor }}>Buy</a>
-          <Link to="/about" className="hover:underline" style={{ color: textColor }}>About</Link>
-          <a href="#" className="hover:underline" style={{ color: textColor }}>HELOC</a>
-          <a href="#" className="hover:underline" style={{ color: textColor }}>Rates</a>
-          <a href="#" className="hover:underline" style={{ color: textColor }}>Better+</a>
+          <Link
+            to="/"
+            className={getLinkClass("/")}
+            style={{ color: textColor }}
+          >
+            Buy
+          </Link>
+          <Link
+            to="/about"
+            className={getLinkClass("/about")}
+            style={{ color: textColor }}
+          >
+            About
+          </Link>
+          <a href="#" className="hover:underline" style={{ color: textColor }}>
+            HELOC
+          </a>
+          <a href="#" className="hover:underline" style={{ color: textColor }}>
+            Rates
+          </a>
+          <a href="#" className="hover:underline" style={{ color: textColor }}>
+            Better+
+          </a>
           <div className="flex items-center space-x-4 mt-2">
             <button
               aria-label="Call"
@@ -143,7 +210,9 @@ const Navbar = () => {
                   2z" />
               </svg>
             </button>
-            <a href="#" className="hover:underline" style={{ color: textColor }}>Sign in</a>
+            <a href="#" className="hover:underline" style={{ color: textColor }}>
+              Sign in
+            </a>
           </div>
         </div>
       )}
