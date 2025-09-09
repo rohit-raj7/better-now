@@ -36,8 +36,5 @@ Replicate the design and layout of the following pages:
 ## Notes 
 - Use **clean code practices**, proper **component structure**, and **state management** where necessary.
 - Interactive elements (forms, calculators) should work correctly.
- 
-
-
-## Folder Structure Example
+  
 
