@@ -1,6 +1,4 @@
-# React Assignment
  
-
 ## Assignment Overview
 
 Develop a multi-page web application using **React** , replicating the design and basic functionality of specific pages from the [Better Assignmet ](https://better-now-two.vercel.app) website.
@@ -30,7 +28,7 @@ Replicate the design and layout of the following pages:
  application to closely match **Better.com** using **Tailwind CSS **.
 
 ### 6. Deployment
-- Deploy the application on **Vercel.
+- Deploy the application on **Vercel**.
 - Provide the **live URL** in the submission.
 
 ---
