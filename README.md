@@ -10,7 +10,7 @@ Develop a multi-page web application using **React** , replicating the design an
 ### 1. React and Next.js Application
 - Build the application using **React** with **Next.js**.
 
-### 2. Better.com Replica
+### 2. Deploy 
 Replicate the design and layout of the following pages:
 - **Home Page:** [https://better-now-two.vercel.app/](https://better-now-two.vercel.app)
 - **About Us Page:** [https://better-now-two.vercel.app/about](https://better-now-two.vercel.app/about)
