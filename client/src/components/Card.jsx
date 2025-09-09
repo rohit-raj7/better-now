@@ -4,7 +4,7 @@ const LoanUI = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
       {/* Phone Mockup */}
-      <div className="relative w-[288px] h-[452px]">
+      <div className="relative w-[280px] h-[452px]">
         <div className="absolute inset-0 rounded-[1.6rem] bg-black/40 border-[3px] border-black"></div>
 
         {/* Card 1 (Loan Approval) */}

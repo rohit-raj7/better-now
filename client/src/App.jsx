@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./about/About";
 import MortgageCalculator from './components/mortgageCalculator/Calculator'
 import Start from "./components/startPage/StartPage";
+import Footer from './footer/Footer'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/mortgage-calculator" element={<MortgageCalculator />} />
           <Route path="/start-now" element={<Start />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
