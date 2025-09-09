@@ -25,28 +25,25 @@ Replicate the design and layout of the following pages:
 - **Start Page:** [https://better-now-two.vercel.app/start-now](https://better-now-two.vercel.app/start-now)
 
 ### 3. Routing
-- Set up routing for the above four pages using **Next.js routing**.
+- Set up routing for the above four pages using **React.js routing**.
 
 ### 4. Interactive Components
 - Implement functional components such as **Mortgage Calculator** and relevant forms.
 
 ### 5. Responsiveness
 - Ensure the site is fully **responsive** across devices (mobile, tablet, desktop).
+ application to closely match **Better.com** using **Tailwind CSS **.
 
-### 6. Styling
-- Style the application to closely match **Better.com** using **CSS, SCSS, or styled-components**.
-
-### 7. Deployment
+### 6. Deployment
 - Deploy the application on **Vercel.
 - Provide the **live URL** in the submission.
 
 ---
 
-## Notes
-- Focus on **pixel-perfect replication** of Better.com pages.
+## Notes 
 - Use **clean code practices**, proper **component structure**, and **state management** where necessary.
 - Interactive elements (forms, calculators) should work correctly.
-- Responsive design is **mandatory**.
+ 
 
 
 ## Folder Structure Example
