@@ -1,14 +1,9 @@
-# Better.com React Intern Assignment
-
-## Dear Candidate
-
-As part of the selection process for the React Intern role, this assignment is designed to evaluate your skills in React development, GIT knowledge, and deployment capabilities.
-
----
+# React Assignment
+ 
 
 ## Assignment Overview
 
-Develop a multi-page web application using **React** with **Next.js**, replicating the design and basic functionality of specific pages from the [Better.com](https://better.com) website.
+Develop a multi-page web application using **React** , replicating the design and basic functionality of specific pages from the [Better Assignmet ](https://better-now-two.vercel.app) website.
 
 ---
 
